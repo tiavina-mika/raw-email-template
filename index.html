@@ -1,3 +1,5 @@
+<!-- https://www.emailonacid.com/blog/article/email-development/media-queries-in-html-email/ -->
+<!-- https://help.brevo.com/hc/en-us/articles/6632412983186-Limitations-when-using-HTML-for-your-email-campaigns#tab-content-82 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,10 +10,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <table style="background-color: #f6f8fc;" role=”presentation” border="0" cellpadding="0" cellspacing="0" align="center">
+    <style>
+      .container {
+        background-color: #f6f8fc;
+      }
+      .left, .right {
+        width: 25%;
+      }
+      .center {
+        width: 75%;
+      }
+      @media only screen and (max-width: 600px) {
+        .left, .right {
+          width: 0;
+        }
+      }
+      @media only screen and (min-width: 600px) and (max-width: 900px) {
+        .left, .right {
+          width: 10%;
+        }
+      }
+      .par {
+        color: red;
+      }
+    </style>
+    <table class="container" role=”presentation” border="0" cellpadding="0" cellspacing="0" align="center">
       <tr>
         <!-- left -->
-        <td style="width: 25%"></td>
+        <td class="left"></td>
         <!-- cesnter -->
         <td style="background-color: #fff; padding: 24px 32px;">
           <table>
@@ -26,7 +52,7 @@
             <tr>
               <!-- title -->
               <td align="left">
-                  <h2>
+                  <h2 class="par">
                     Crates vont vouloir débrancher le candidat Biden
                   </h2>
                 </td>
@@ -63,7 +89,7 @@
             </tr>
           </table>
         </td>
-        <td style="width: 25%"></td>
+        <td class="right"></td>
       </tr>
     </table>
   </body>
