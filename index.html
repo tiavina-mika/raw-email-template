@@ -10,15 +10,37 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <style>
+    <style type="text/css">
+      @media screen {
+        @font-face {
+          font-family: 'BasierCircle-Medium';
+          font-style: normal;
+          font-weight: 400;
+          src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+        }
+      }
+      
       .container {
         background-color: #f6f8fc;
+        font-family: "BasierCircle-Medium", Sans-Serif;
+        font-size: 16px;
       }
       .left, .right {
         width: 25%;
       }
       .center {
         width: 75%;
+      }
+      .main-button {
+        background-color: #000;
+        color: #fff;
+        border-radius: 4px;
+        padding: 12px 24px;
+        font-size: 16px;
+        margin-top: 14px;
+      }
+      .footer1 {
+        margin-top: 32px;
       }
       @media only screen and (max-width: 600px) {
         .left, .right {
@@ -29,9 +51,6 @@
         .left, .right {
           width: 10%;
         }
-      }
-      .par {
-        color: red;
       }
     </style>
     <table class="container" role=”presentation” border="0" cellpadding="0" cellspacing="0" align="center">
@@ -52,7 +71,8 @@
             <tr>
               <!-- title -->
               <td align="left">
-                  <h2 class="par">
+                  <h2>
+                    <!-- dynamic title -->
                     Crates vont vouloir débrancher le candidat Biden
                   </h2>
                 </td>
@@ -68,8 +88,9 @@
             <!-- buttons -->
             <tr>
               <td align="center">
+                <!-- dynamic url -->
                 <a href="https://www.facebook.com" alt="">
-                  <button style="background-color: #000; color: #fff; border-radius: 4px; padding: 12px;">
+                  <button class="main-button">
                     Read the article
                   </button>
                 </a>
@@ -78,7 +99,7 @@
             <!-- footer -->
             <tr>
               <td align="center">
-                <p>
+                <p class="footer1">
                   Click here if you want to 
                   <a href="https://www.facebook.com" alt="">
                     unsuscribe
@@ -89,6 +110,7 @@
             </tr>
           </table>
         </td>
+        <!-- right -->
         <td class="right"></td>
       </tr>
     </table>
