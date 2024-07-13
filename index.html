@@ -28,6 +28,7 @@
       .card {
         background-color: #fff;
         padding: 24px 32px;
+        max-width: 500px;
       }
       .table-logo {
         width: 100%;
@@ -49,7 +50,6 @@
       }
       .center {
         width: 75%;
-        max-width: 800px;
       }
       .main-button {
         background-color: #000;
@@ -67,21 +67,22 @@
         font-size: 12px;
         color: #303030;
       }
-      /* mobile */
       @media only screen and (max-width: 600px) {
-        .center {
-          width: 96%;
-        }
-        .left, .right {
-          width: 0;
-        }
+      .center {
+        width: 96%;
       }
-      /* tablet */
-      @media only screen and (min-width: 600px) and (max-width: 900px) {
-        .left, .right {
-          width: 10%;
-        }
+      .left, .right {
+        width: 2%;
       }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+      .center {
+        width: 80%;
+      }
+      .left, .right {
+        width: 10%;
+      }
+    }
     </style>
     <table class="root" role=”presentation” border="0" cellpadding="0" cellspacing="0" align="center">
       <tr>
@@ -105,7 +106,7 @@
               <!-- left -->
               <td class="left"></td>
               <!-- cesnter -->
-              <td class="card center">
+              <td class="card">
                 <table>
                   <!-- <tr>
                     <td align="left">
